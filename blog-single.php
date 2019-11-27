@@ -1,3 +1,15 @@
+<?php 
+include 'App/koneksi.php';
+
+$info = new Frontend();
+
+    $artikel = new Artikel();
+    foreach ($info->info($_GET['id']) as $data) {
+        $kategori = $data['nama_kategori'];
+    }
+    // var_dump($artikel);                                    
+    var_dump($kategori);
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -95,7 +107,17 @@
 				</div>
 			</div>
 		</aside>
-
+		<?php
+                $artikel = new Artikel();
+                foreach ($artikel->show($_GET['id']) as $data) {
+                    $id = $data['id'];
+                    $judul = $data['judul'];
+                    $konten = $data['konten'];
+                    $foto = $data['foto'];
+                    $tgl = date_create($data['tgl_buat']);
+                }
+                // var_dump($artikel);                                    
+                ?>
 		<div id="colorlib-container">
 			<div class="container">
 				<div class="row">
@@ -104,11 +126,11 @@
 							<div class="col-md-12">
 								<div class="blog-entry">
 									<div class="blog-img blog-detail">
-										<img src="assets/stuff/images/blog-4.jpg" class="img-responsive" alt="html5 bootstrap template">
+										<img src="admin/artikel/img/<?= $foto ?>" class="img-responsive" alt="html5 bootstrap template">
 									</div>
 									<div class="desc">
 										<p class="meta">
-											<span class="cat"><a href="#">Events</a></span>
+											<span class="cat"><a href="#"><?= $kategori; ?></a></span>
 											<span class="date">20 March 2018</span>
 											<span class="pos">By <a href="#">Rich</a></span>
 										</p>

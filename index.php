@@ -133,7 +133,7 @@ include 'App/koneksi.php';
 					<div class="col-md-4">
 						<div class="blog-entry">
 							<div class="blog-img">
-								<a href="<?= $key['link'];?>.php"><img src="admin/artikel/img/<?= $key['foto']; ?>" class="img-responsive" alt="html5 bootstrap template"></a>
+								<a href="blog-single.php?id=<?= $key['id']; ?>"><img src="admin/artikel/img/<?= $key['foto']; ?>" class="img-responsive" alt="html5 bootstrap template"></a>
 							</div>
 							<div class="desc">
 								<p class="meta">

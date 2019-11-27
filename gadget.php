@@ -1,3 +1,6 @@
+<?php 
+include 'App/koneksi.php';
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
