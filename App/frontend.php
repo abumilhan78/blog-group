@@ -5,7 +5,7 @@
 		public function index()
 		{
 			$blog = mysqli_query($this->koneksi,
-				"SELECT artikel.id, artikel.judul, artikel.slug, artikel.foto, artikel.tgl_buat, kategori.nama as nama_kategori, users.nama as penulis FROM ((artikel JOIN kategori ON kategori.id = artikel.id_kategori) JOIN users on users.id = artikel.id_user)"
+				"SELECT artikel.id, artikel.judul, artikel.slug, artikel.foto, artikel.tgl_dibuat, kategori.nama as nama_kategori, kategori.slug as link, users.nama as penulis FROM ((artikel JOIN kategori ON kategori.id = artikel.id_kategori) JOIN users on users.id = artikel.id_user)"
 			);
 			return $blog;
 		}
