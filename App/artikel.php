@@ -50,7 +50,7 @@ class Artikel extends Database
     {
         mysqli_query(
             $this->koneksi,
-            "update artikel set judul='$judul', konten='$konten', foto='$foto', tgl_buat='$tgl_buat', slug='$slug', id_kategori='$id_kategori', id_user='$id_user' where id='$id'"
+            "update artikel set judul='$judul', konten='$konten', foto='$foto', tgl_dibuat='$tgl_buat', slug='$slug', id_kategori='$id_kategori', id_user='$id_user' where id='$id'"
         );
     }
 

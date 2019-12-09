@@ -11,7 +11,6 @@ if (!$_SESSION['login']) {
     ?>
     <!DOCTYPE html>
     <html>
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,23 +19,23 @@ if (!$_SESSION['login']) {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="all,follow">
         <!-- Bootstrap CSS-->
-        <link rel="stylesheet" href="/assets/template/admin/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/admin/vendor/bootstrap/css/bootstrap.min.css">
         <!-- Font Awesome CSS-->
-        <link rel="stylesheet" href="/assets/template/admin/vendor/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/assets/admin/vendor/font-awesome/css/font-awesome.min.css">
         <!-- Fontastic Custom icon font-->
-        <link rel="stylesheet" href="/assets/template/admin/css/fontastic.css">
+        <link rel="stylesheet" href="/assets/admin/css/fontastic.css">
         <!-- Google fonts - Roboto -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
         <!-- jQuery Circle-->
-        <link rel="stylesheet" href="/assets/template/admin/css/grasp_mobile_progress_circle-1.0.0.min.css">
+        <link rel="stylesheet" href="/assets/admin/css/grasp_mobile_progress_circle-1.0.0.min.css">
         <!-- Custom Scrollbar-->
-        <link rel="stylesheet" href="/assets/template/admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" href="/assets/admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
         <!-- theme stylesheet-->
-        <link rel="stylesheet" href="/assets/template/admin/css/style.default.css" id="theme-stylesheet">
+        <link rel="stylesheet" href="/assets/admin/css/style.default.css" id="theme-stylesheet">
         <!-- Custom stylesheet - for your changes-->
-        <link rel="stylesheet" href="/assets/template/admin/css/custom.css">
+        <link rel="stylesheet" href="/assets/admin/css/custom.css">
         <!-- Favicon-->
-        <link rel="shortcut icon" href="/assets/template/admin/img/favicon.ico">
+        <link rel="shortcut icon" href="/assets/admin/img/favicon.ico">
         <!-- Tweaks for older IEs-->
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -52,7 +51,7 @@ if (!$_SESSION['login']) {
                 <!-- Sidebar Header    -->
                 <div class="sidenav-header d-flex align-items-center justify-content-center">
                     <!-- User Info-->
-                    <div class="sidenav-header-inner text-center"><img src="/assets/template/admin/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle">
+                    <div class="sidenav-header-inner text-center"><img src="/assets/admin/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle">
                         <h2 class="h5"><?php echo $user['nama']; ?></h2><span><?php echo $user['email']; ?></span>
                     </div>
                     <!-- Small Brand information, appears on minimized sidebar-->
@@ -123,21 +122,21 @@ if (!$_SESSION['login']) {
                                 <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope"></i><span class="badge badge-info">10</span></a>
                                     <ul aria-labelledby="notifications" class="dropdown-menu">
                                         <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                                <div class="msg-profile"> <img src="/assets/template/admin/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                                                <div class="msg-profile"> <img src="/assets/admin/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
                                                 <div class="msg-body">
                                                     <h3 class="h5">Jason Doe</h3><span>sent you a direct
                                                         message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
                                                 </div>
                                             </a></li>
                                         <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                                <div class="msg-profile"> <img src="/assets/template/admin/img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                                                <div class="msg-profile"> <img src="/assets/admin/img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
                                                 <div class="msg-body">
                                                     <h3 class="h5">Frank Williams</h3><span>sent you a direct
                                                         message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
                                                 </div>
                                             </a></li>
                                         <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                                <div class="msg-profile"> <img src="/assets/template/admin/img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                                                <div class="msg-profile"> <img src="/assets/admin/img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
                                                 <div class="msg-body">
                                                     <h3 class="h5">Ashley Wood</h3><span>sent you a direct
                                                         message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
@@ -148,10 +147,10 @@ if (!$_SESSION['login']) {
                                     </ul>
                                 </li>
                                 <!-- Languages dropdown    -->
-                                <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link language dropdown-toggle"><img src="/assets/template/admin/img/flags/16/GB.png" alt="English"><span class="d-none d-sm-inline-block">English</span></a>
+                                <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link language dropdown-toggle"><img src="/assets/admin/img/flags/16/GB.png" alt="English"><span class="d-none d-sm-inline-block">English</span></a>
                                     <ul aria-labelledby="languages" class="dropdown-menu">
-                                        <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="/assets/template/admin/img/flags/16/DE.png" alt="English" class="mr-2"><span>German</span></a></li>
-                                        <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="/assets/template/admin/img/flags/16/FR.png" alt="English" class="mr-2"><span>French </span></a></li>
+                                        <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="/assets/admin/img/flags/16/DE.png" alt="English" class="mr-2"><span>German</span></a></li>
+                                        <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="/assets/admin/img/flags/16/FR.png" alt="English" class="mr-2"><span>French </span></a></li>
                                     </ul>
                                 </li>
                                 <!-- Log out-->
@@ -251,20 +250,20 @@ if (!$_SESSION['login']) {
             </footer>
         </div>
         <!-- JavaScript files-->
-        <script src="/assets/template/admin/vendor/jquery/jquery.min.js"></script>
-        <script src="/assets/template/admin/vendor/popper.js/umd/popper.min.js"> </script>
-        <script src="/assets/template/admin/vendor/bootstrap/js/bootstrap.min.js"></script>
-        <script src="/assets/template/admin/js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
-        <script src="/assets/template/admin/vendor/jquery.cookie/jquery.cookie.js"> </script>
-        <script src="/assets/template/admin/vendor/chart.js/Chart.min.js"></script>
-        <script src="/assets/template/admin/vendor/jquery-validation/jquery.validate.min.js"></script>
-        <script src="/assets/template/admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js">
+        <script src="/assets/admin/vendor/jquery/jquery.min.js"></script>
+        <script src="/assets/admin/vendor/popper.js/umd/popper.min.js"> </script>
+        <script src="/assets/admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/assets/admin/js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+        <script src="/assets/admin/vendor/jquery.cookie/jquery.cookie.js"> </script>
+        <script src="/assets/admin/vendor/chart.js/Chart.min.js"></script>
+        <script src="/assets/admin/vendor/jquery-validation/jquery.validate.min.js"></script>
+        <script src="/assets/admin/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js">
         </script>
-        <script src="/assets/template/admin/js/charts-home.js"></script>
+        <script src="/assets/admin/js/charts-home.js"></script>
         <!-- Main File-->
-        <script src="/assets/template/admin/js/front.js"></script>
+        <script src="/assets/admin/js/front.js"></script>
         <!-- DataTable -->
-        <script src="/assets/DataTables/datatables.min.js"></script>
+        <script src="/assetses/datatables.min.js"></script>
         <script>
             $(document).ready(function() {
                 $('#datatable').DataTable();

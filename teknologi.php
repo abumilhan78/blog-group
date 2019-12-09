@@ -67,19 +67,11 @@
 						</div>
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li class="has-dropdown">
-									<a href="blog.html">Blog</a>
-									<ul class="dropdown">
-										<li><a href="single.html">Blog Single</a></li>
-										<li><a href="#">Video</a></li>
-										<li><a href="#">Read</a></li>
-										<li><a href="#">Lifestyle</a></li>
-									</ul>
-								</li>
-								<li><a href="event.html">Event</a></li>
-								<li class="active"><a href="travel.html">Travel</a></li>
-								<li><a href="about.html">About Me</a></li>
+								<li><a href="index.php">Home</a></li>
+								<li class="active"><a href="teknologi.php">Teknologi</a></li>
+								<li><a href="gadget.php">Gadget</a></li>
+								<li><a href="informatika.php">Informatika</a></li>
+								<li><a href="elektronika.php">Elektronika</a></li>
 								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</div>
@@ -92,8 +84,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 breadcrumbs text-center">
-						<h2>Travel</h2>
-						<p><span><a href="index.html">Home</a></span> / <span>Travel</span></p>
+						<h2>Teknologi</h2>
+						<p><span><a href="index.html">Home</a></span> / <span>Teknologi</span></p>
 					</div>
 				</div>
 			</div>

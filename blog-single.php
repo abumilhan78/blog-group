@@ -6,10 +6,15 @@ $info = new Frontend();
     $artikel = new Artikel();
     foreach ($info->info($_GET['id']) as $data) {
         $kategori = $data['nama_kategori'];
+        $penulis = $data['penulis'];
+        $link = $data['link'];
+        $link =  strtoupper($link);
+        $judul = $data['judul'];
     }
-    // var_dump($artikel);                                    
-    var_dump($kategori);
+    
+    // var_dump($artikel);
 ?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -76,19 +81,11 @@ $info = new Frontend();
 						</div>
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li class="has-dropdown active">
-									<a href="blog.html">Blog</a>
-									<ul class="dropdown">
-										<li><a href="single.html">Blog Single</a></li>
-										<li><a href="#">Video</a></li>
-										<li><a href="#">Read</a></li>
-										<li><a href="#">Lifestyle</a></li>
-									</ul>
-								</li>
-								<li><a href="event.html">Event</a></li>
-								<li><a href="travel.html">Travel</a></li>
-								<li><a href="about.html">About Me</a></li>
+								<li><a href="index.php">Home</a></li>
+								<li class="<?php if ($link == 'TEKNOLOGI') {echo "active";} ?>"><a href="teknologi.php">Teknologi</a></li>
+								<li class="<?php if ($link == 'GADGET') {echo "active";} ?>"><a href="gadget.php">Gadget</a></li>
+								<li class="<?php if ($link == 'INFORMATIKA') {echo "active";} ?>"><a href="informatika.php">Informatika</a></li>
+								<li class="<?php if ($link == 'ELEKTRONIKA') {echo "active";} ?>"><a href="elektronika.php">Elektronika</a></li>
 								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</div>
@@ -102,7 +99,7 @@ $info = new Frontend();
 				<div class="row">
 					<div class="col-md-12 breadcrumbs text-center">
 						<h2>Blog detail</h2>
-						<p><span><a href="index.html">Home</a></span> / <span><a href="blog.html">Blog </a></span> / <span>Blog Single</span></p>
+						<p><span><a href="index.html">HOME</a></span> / <span><a href="blog.html"><?= $link; ?> </a></span> / <span><?= $judul; ?></span></p>
 					</div>
 				</div>
 			</div>
@@ -114,7 +111,8 @@ $info = new Frontend();
                     $judul = $data['judul'];
                     $konten = $data['konten'];
                     $foto = $data['foto'];
-                    $tgl = date_create($data['tgl_buat']);
+                    $date = date_create($data['tgl_dibuat']);
+                    $content = $data['konten'];
                 }
                 // var_dump($artikel);                                    
                 ?>
@@ -131,105 +129,20 @@ $info = new Frontend();
 									<div class="desc">
 										<p class="meta">
 											<span class="cat"><a href="#"><?= $kategori; ?></a></span>
-											<span class="date">20 March 2018</span>
-											<span class="pos">By <a href="#">Rich</a></span>
+											<span class="date"><?= date_format($date, 'd F Y'); ?></span>
+											<span class="pos">By <a href="#"><?= $penulis; ?></a></span>
 										</p>
-										<h2><a href="blog.html">Recipe for your site</a></h2>
-										<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. </p>
-										<blockquote>
+										<h2><a href="blog.html"><?= $judul; ?></a></h2>
+										<p><?= $content; ?></p>
+										<!-- <blockquote>
 											A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-										</blockquote>
-										<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-										<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. </p>
+										</blockquote> -->
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="row row-pb-lg">
-							<div class="col-md-12">
-								<h2 class="heading-2">23 Comments</h2>
-								<div class="review">
-						   		<div class="user-img" style="background-image: url(assets/stuff/images/person1.jpg)"></div>
-						   		<div class="desc">
-						   			<h4>
-						   				<span class="text-left">Jacob Webb</span>
-						   				<span class="text-right">24 March 2018</span>
-						   			</h4>
-						   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
-						   			<p class="star">
-					   					<span class="text-left"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
-						   			</p>
-						   		</div>
-						   	</div>
-						   	<div class="review">
-						   		<div class="user-img" style="background-image: url(assets/stuff/images/person2.jpg)"></div>
-						   		<div class="desc">
-						   			<h4>
-						   				<span class="text-left">Jacob Webb</span>
-						   				<span class="text-right">24 March 2018</span>
-						   			</h4>
-						   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
-						   			<p class="star">
-					   					<span class="text-left"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
-						   			</p>
-						   		</div>
-						   	</div>
-						   	<div class="review">
-						   		<div class="user-img" style="background-image: url(assets/stuff/images/person3.jpg)"></div>
-						   		<div class="desc">
-						   			<h4>
-						   				<span class="text-left">Jacob Webb</span>
-						   				<span class="text-right">24 March 2018</span>
-						   			</h4>
-						   			<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
-						   			<p class="star">
-					   					<span class="text-left"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
-						   			</p>
-						   		</div>
-						   	</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<h2 class="heading-2">Say something</h2>
-								<form action="#">
-									<div class="row form-group">
-										<div class="col-md-6">
-											<!-- <label for="fname">First Name</label> -->
-											<input type="text" id="fname" class="form-control" placeholder="Your firstname">
-										</div>
-										<div class="col-md-6">
-											<!-- <label for="lname">Last Name</label> -->
-											<input type="text" id="lname" class="form-control" placeholder="Your lastname">
-										</div>
-									</div>
-
-									<div class="row form-group">
-										<div class="col-md-12">
-											<!-- <label for="email">Email</label> -->
-											<input type="text" id="email" class="form-control" placeholder="Your email address">
-										</div>
-									</div>
-
-									<div class="row form-group">
-										<div class="col-md-12">
-											<!-- <label for="subject">Subject</label> -->
-											<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
-										</div>
-									</div>
-
-									<div class="row form-group">
-										<div class="col-md-12">
-											<!-- <label for="message">Message</label> -->
-											<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
-										</div>
-									</div>
-									<div class="form-group">
-										<input type="submit" value="Post Comment" class="btn btn-primary">
-									</div>
-								</form>	
-							</div>
-						</div>
+						
+						
 					</div>
 					<div class="col-md-3">
 						<div class="sidebar">
@@ -280,33 +193,8 @@ $info = new Frontend();
 									</div>
 								</div>
 							</div>
-							<div class="side">
-								<h2 class="sidebar-heading">Instagram</h2>
-								<div class="instagram-entry">
-									<a href="#" class="instagram text-center" style="background-image: url(assets/stuff/images/gallery-1.jpg);">
-									</a>
-									<a href="#" class="instagram text-center" style="background-image: url(assets/stuff/images/gallery-2.jpg);">
-									</a>
-									<a href="#" class="instagram text-center" style="background-image: url(assets/stuff/images/gallery-3.jpg);">
-									</a>
-									<a href="#" class="instagram text-center" style="background-image: url(assets/stuff/images/gallery-4.jpg);">
-									</a>
-									<a href="#" class="instagram text-center" style="background-image: url(assets/stuff/images/gallery-5.jpg);">
-									</a>
-									<a href="#" class="instagram text-center" style="background-image: url(assets/stuff/images/gallery-6.jpg);">
-									</a>
-									<a href="#" class="instagram text-center" style="background-image: url(assets/stuff/images/gallery-7.jpg);">
-									</a>
-									<a href="#" class="instagram text-center" style="background-image: url(assets/stuff/images/gallery-8.jpg);">
-									</a>
-								</div>
-							</div>
-							<div class="side">
-								<div class="form-group">
-									<input type="text" class="form-control form-email text-center" id="email" placeholder="Enter your email">
-									<button type="submit" class="btn btn-primary btn-subscribe">Subscribe</button>
-								</div>
-							</div>
+							
+							
 						</div>
 					</div>
 				</div>
@@ -340,8 +228,30 @@ $info = new Frontend();
 				</div>
 			</div>
 		</div>
+
+  
+
 		<footer id="colorlib-footer" role="contentinfo">
 			<div class="container">
+				<!---->
+          <!-- KODE BERIKUT ADALAH KODE HASIL COPY PASTE DARI DISQUS-->
+                    <div id="disqus_thread"></div>
+                      <div id="disqus_thread"></div>
+                      <script type="text/javascript">
+                          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                          var disqus_shortname = 'zamannie'; // required: replace example with your forum shortname
+
+                          /* * * DON'T EDIT BELOW THIS LINE * * */
+                          (function() {
+                          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                        </script>
+                      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><br>
+<!-- END -->
+
 				<div class="row row-pb-md">
 					<div class="col-md-3">
 						<h2>Navigational</h2>
