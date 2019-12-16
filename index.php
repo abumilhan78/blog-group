@@ -7,7 +7,7 @@ include 'App/koneksi.php';
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Stuff Template</title>
+	<title>Zamannie</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -61,7 +61,7 @@ include 'App/koneksi.php';
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-2">
-							<div id="colorlib-logo"><a href="index.html">Stuff</a></div>
+							<div id="colorlib-logo"><a href="index.html">Zamannie</a></div>
 						</div>
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
@@ -70,7 +70,6 @@ include 'App/koneksi.php';
 								<li><a href="gadget.php">Gadget</a></li>
 								<li><a href="informatika.php">Informatika</a></li>
 								<li><a href="elektronika.php">Elektronika</a></li>
-								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -125,7 +124,7 @@ include 'App/koneksi.php';
 					<div class="col-md-4">
 						<div class="blog-entry">
 							<div class="blog-img">
-								<a href="blog-single.php?id=<?= $key['id']; ?>"><img src="admin/artikel/img/<?= $key['foto']; ?>" class="img-responsive" alt="html5 bootstrap template"></a>
+								<a href="blog-single.php?id=<?= $key['id']; ?>"><img style="height: 200px; width: 200px;" src="admin/artikel/img/<?= $key['foto']; ?>" class="img-responsive" alt="html5 bootstrap template"></a>
 							</div>
 							<div class="desc">
 								<p class="meta">

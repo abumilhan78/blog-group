@@ -42,6 +42,8 @@ if (!$_SESSION['login']) {
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
         <!-- DataTable -->
         <link rel="stylesheet" href="/assets/DataTables/datatables.min.css">
+        <script type="text/javascript" src="/assets/ckeditor/ckeditor.js"></script>
+
     </head>
 
     <body>
@@ -199,7 +201,7 @@ if (!$_SESSION['login']) {
                                     </div>
                                     <div class="form-group">
                                         <label for="">Konten</label>
-                                        <textarea type="text" class="form-control" rows="5" name="konten" required><?php echo $data['konten']; ?></textarea>
+                                        <textarea type="text" id="editor1" class="form-control" rows="5" name="konten" required><?php echo $data['konten']; ?></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="">Foto Artikel</label><br>
@@ -268,6 +270,21 @@ if (!$_SESSION['login']) {
             $(document).ready(function() {
                 $('#datatable').DataTable();
             });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('#datatable').DataTable();
+            });
+        </script>
+        <script>
+            CKEDITOR.replace('editor1');
+            CKEDITOR.stylesSet.add('myStyles', [{
+                name: 'Custom Span',
+                element: 'span'
+        }]);
+            CKEDITOR.config.stylesSet = 'myStyles';
+            CKEDITOR.config.height = 150;
+            CKEDITOR.config.filebrowserImageBrowseUrl = "/admin/artikel/img";
         </script>
     </body>
 
